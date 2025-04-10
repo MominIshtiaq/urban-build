@@ -10,6 +10,7 @@ import {
   PiUserGearFill,
 } from "react-icons/pi";
 import Pretitle from "./Pretitle";
+import { motion } from "motion/react";
 
 const serviceData = [
   {
@@ -73,7 +74,8 @@ const serviceData = [
     name: "consulting",
     icon: <PiUserGearFill />,
     title: "Consulting Services",
-    description: "",
+    description:
+      "Consultong services about damaged or aging structures. We specialize in consulting about historical landmarks, buildings, and properites with meticulous care.",
     serviceList: [
       "Project Plans",
       "Costing",
@@ -92,7 +94,18 @@ const serviceData = [
 const Services = () => {
   const [activeTab, setActiveTab] = useState("constructions");
   return (
-    <section className="pt-16 xl:pt-32" id="services">
+    <motion.section
+      initial={{ x: -200, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{
+        duration: 1,
+        type: "tween",
+        ease: [0.25, 0.25, 0.25, 0.75],
+      }}
+      viewport={{ once: true, amount: 0.4 }}
+      className="pt-16 xl:pt-32"
+      id="services"
+    >
       <div className="container mx-auto">
         <div className="text-center max-w-[540px] mb-20 mx-auto">
           <Pretitle text="Our services" center />
@@ -181,7 +194,7 @@ const Services = () => {
           </div>
         </Tabs>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
