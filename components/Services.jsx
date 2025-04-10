@@ -105,7 +105,7 @@ const Services = () => {
 
         {/* tabs */}
         <Tabs
-          defaultValue="construction"
+          defaultValue="constructions"
           onValueChange={(value) => setActiveTab(value)}
           className="flex flex-col xl:flex-row"
         >
