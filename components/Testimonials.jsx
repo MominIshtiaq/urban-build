@@ -21,7 +21,7 @@ const Testimonials = () => {
             <Button text={"Work with us"} />
           </div>
           {/* image and slider */}
-          <div className="flex-1 flex flex-col xl:flex-row xl:justify-end">
+          <div className="flex-1 flex flex-col xl:flex-row xl:justify-end md:items-center">
             <div className="relative hidden xl:flex xl:w-[570px] xl:h-[580px]">
               <Image
                 src={"/assets/img/testimonials/img.jpg"}
@@ -32,6 +32,7 @@ const Testimonials = () => {
               />
             </div>
             <div className="xl:absolute xl:bottom-0 xl:right-[160px] relative max-w-max">
+              <div className="xl:flex w-[95%] h-[193px] bg-[#ffca3b] absolute -top-2 -left-2 z-1"></div>
               {/* quote icon imag */}
               <Image
                 src={"/assets/img/testimonials/quote.svg"}

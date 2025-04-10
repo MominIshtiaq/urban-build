@@ -8,7 +8,7 @@ const About = () => {
     <section className="pt-16 xl:pt-32" id="about">
       <div className="container mx-auto">
         <div className="flex flex-col gap-12 xl-gap:0 xl:flex-row xl:items-center">
-          <div className="flex-1 xl:flex xl:justify-center">
+          <div className="flex-1">
             <div className="max-w-[540px]">
               <Pretitle text="About us" />
               <h2 className="h2 mb-6">

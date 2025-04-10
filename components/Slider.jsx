@@ -10,7 +10,7 @@ const Slider = () => {
   return (
     <Swiper className="bg-white shadow-lg w-full max-w-[630px] h-[200px] ">
       <SwiperSlide>
-        <div className="px-12 md:pl-[60px] flex items-center gap-9 h-full">
+        <div className="px-12 pl-[20px] md:pl-[60px] flex items-center gap-9 h-full">
           {/* Avatar image */}
           <div className="relative hidden xl:flex w-[90px] h-[90px]">
             <Image
@@ -33,7 +33,7 @@ const Slider = () => {
       </SwiperSlide>
 
       <SwiperSlide>
-        <div className="px-12 md:pl-[60px] flex items-center gap-9 h-full">
+        <div className="px-12 pl-[20px] md:pl-[60px] flex items-center gap-9 h-full">
           {/* Avatar image */}
           <div className="relative hidden xl:flex w-[90px] h-[90px]">
             <Image
@@ -56,7 +56,7 @@ const Slider = () => {
       </SwiperSlide>
 
       <SwiperSlide>
-        <div className="px-12 md:pl-[60px] flex items-center gap-9 h-full">
+        <div className="px-12 pl-[20px] md:pl-[60px] flex items-center gap-9 h-full">
           {/* Avatar image */}
           <div className="relative hidden xl:flex w-[90px] h-[90px]">
             <Image
