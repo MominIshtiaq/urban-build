@@ -3,25 +3,21 @@ import Pretitle from "./Pretitle";
 import Image from "next/image";
 import Button from "./Button";
 import { motion } from "motion/react";
+import { fadeIn } from "@/public/assets/variants";
 
 const About = () => {
   return (
-    <motion.section
-      initial={{ y: 200, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{
-        duration: 1,
-        type: "tween",
-        ease: [0.25, 0.25, 0.25, 0.75],
-      }}
-      viewport={{ once: true, amount: 0.4 }}
-      className="pt-16 xl:pt-32"
-      id="about"
-    >
+    <section className="pt-16 xl:pt-32" id="about">
       <div className="container mx-auto">
         <div className="flex flex-col gap-12 xl-gap:0 xl:flex-row xl:items-center">
           <div className="flex-1">
-            <div className="max-w-[540px]">
+            <motion.div
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
+              className="max-w-[540px]"
+            >
               <Pretitle text="About us" />
               <h2 className="h2 mb-6">
                 Focused on Excellence In Every Project
@@ -41,11 +37,15 @@ const About = () => {
                 <p>Company CEO</p>
               </div>
               <Button text="Contact us" />
-            </div>
+            </motion.div>
           </div>
           <div className="flex-1 hidden xl:flex xl:justify-center">
             <motion.div
               whileHover="hover"
+              variants={fadeIn("left", 0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.2 }}
               className="w-full xl:w-[444px] xl:h-[493px] relative"
             >
               <motion.div
@@ -77,7 +77,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

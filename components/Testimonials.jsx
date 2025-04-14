@@ -3,6 +3,8 @@ import Image from "next/image";
 import Button from "./Button";
 import Pretitle from "./Pretitle";
 import Slider from "./Slider";
+import { motion } from "motion/react";
+import { fadeIn } from "@/public/assets/variants";
 
 const Testimonials = () => {
   return (
@@ -10,7 +12,13 @@ const Testimonials = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row relative">
           {/* text */}
-          <div className="flex-1 max-w-[484px] xl:pt-[54px] mb-12 xl:mb-0">
+          <motion.div
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex-1 max-w-[484px] xl:pt-[54px] mb-12 xl:mb-0"
+          >
             <Pretitle text={"Testimonials"} />
             <h2 className="h2 mb-6">Built On Trust, Proven By Results</h2>
             <p className="mb-10 max-w-[420px]">
@@ -19,9 +27,15 @@ const Testimonials = () => {
               their dreams to live with expert craftsmanship.
             </p>
             <Button text={"Work with us"} />
-          </div>
+          </motion.div>
           {/* image and slider */}
-          <div className="flex-1 flex flex-col xl:flex-row xl:justify-end md:items-center">
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex-1 flex flex-col xl:flex-row xl:justify-end md:items-center"
+          >
             <div className="relative hidden xl:flex xl:w-[570px] xl:h-[580px]">
               <Image
                 src={"/assets/img/testimonials/img.jpg"}
@@ -31,7 +45,13 @@ const Testimonials = () => {
                 quality={100}
               />
             </div>
-            <div className="xl:absolute xl:bottom-0 xl:right-[160px] relative max-w-max">
+            <motion.div
+              variants={fadeIn("left", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className="xl:absolute xl:bottom-0 xl:right-[160px] relative max-w-max"
+            >
               <div className="xl:flex w-[95%] h-[193px] bg-[#ffca3b] absolute -top-2 -left-2 z-1"></div>
               {/* quote icon imag */}
               <Image
@@ -42,8 +62,8 @@ const Testimonials = () => {
                 className="absolute z-20 -top-4 left-[60px]"
               />
               <Slider />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

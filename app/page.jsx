@@ -32,7 +32,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Topbar />
       {/* static header */}
       <div className="relative z-10">
